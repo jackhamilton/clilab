@@ -1,5 +1,5 @@
 [package]
-name = "cli-builder-macros-proc"
+name = "cli-builder-macros"
 version.workspace = true
 edition.workspace = true
 license.workspace = true

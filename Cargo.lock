@@ -3,15 +3,15 @@
 version = 4
 
 [[package]]
-name = "cli-builder-macros"
+name = "cli-builder"
 version = "2.0.0"
 dependencies = [
- "cli-builder-macros-proc",
+ "cli-builder-macros",
  "owo-colors",
 ]
 
 [[package]]
-name = "cli-builder-macros-proc"
+name = "cli-builder-macros"
 version = "2.0.0"
 dependencies = [
  "owo-colors",
@@ -24,7 +24,7 @@ dependencies = [
 name = "example-cli"
 version = "2.0.0"
 dependencies = [
- "cli-builder-macros",
+ "cli-builder",
 ]
 
 [[package]]

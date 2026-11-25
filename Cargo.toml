@@ -1,5 +1,5 @@
 [package]
-name = "cli-builder-macros"
+name = "cli-builder"
 version = "2.0.0"
 edition = "2024"
 license = "Unlicense"
@@ -17,13 +17,13 @@ version = "2.0.0"
 edition = "2024"
 license = "Unlicense"
 authors = ["Jack Hamilton jackham800@gmail.com"]
-keywords = ["cli", "macro"]
-categories = ["command-line-interface"]
+keywords = []
+categories = []
 repository = "https://github.com/jackhamilton/cli-builder-macros"
-description = "Macro to make cli creation easy. Also generates commands for help, version, and zsh completions."
+description = "Support crate for cli-builder"
 
 [dependencies]
-cli-builder-macros-proc = { version = "*", path = "crates/cli-builder-macros" }
+cli-builder-macros = { version = "*", path = "crates/cli-builder-macros" }
 owo-colors = "4.4.0"
 
 [workspace.dependencies]

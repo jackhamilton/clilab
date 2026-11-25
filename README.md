@@ -20,7 +20,7 @@ Argument-taking flags are represented by `CLIFlagType::ArgumentedFlag(flag, valu
 ```rust
 // This provides the macro as well as a reexport of owo-colors, which we use to colorize the output.
 // You should use it too!
-use cli_builder_macros::*;
+use cli_builder::*;
 
 cli_builder! {
     commands = [
@@ -57,7 +57,7 @@ This is a test
 ## With flags
 
 ```rust
-use cli_builder_macros::*;
+use cli_builder::*;
 
 cli_builder! {
     commands = [
@@ -107,7 +107,7 @@ You passed the following flags: --output output.txt
 This demonstrates quick destructuring of input and output argumented flags using filter_map and find_map.
 
 ```rust
-use cli_builder_macros::*;
+use cli_builder::*;
 
 cli_builder! {
 	default = transcode;

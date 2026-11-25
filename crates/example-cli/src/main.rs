@@ -1,4 +1,4 @@
-use cli_builder_macros::*;
+use cli_builder::*;
 
 cli_builder!(
     default = run;
