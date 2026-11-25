@@ -1,5 +1,5 @@
 [package]
-name = "cli-builder"
+name = "clilab"
 version = "1.0.0"
 edition = "2024"
 license = "Unlicense"
@@ -13,14 +13,14 @@ description = "Macro to make cli creation easy. Also generates commands for help
 members = ["crates/cli-builder-macros", "crates/example-cli"]
 
 [workspace.package]
-version = "2.0.0"
+version = "2.0.1"
 edition = "2024"
 license = "Unlicense"
 authors = ["Jack Hamilton jackham800@gmail.com"]
 keywords = []
 categories = []
 repository = "https://github.com/jackhamilton/cli-builder-macros"
-description = "Support crate for cli-builder"
+description = "Support crate for cli-lab"
 
 [dependencies]
 cli-builder-macros = { version = "~2", path = "crates/cli-builder-macros" }
