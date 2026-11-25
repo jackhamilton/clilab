@@ -6,18 +6,22 @@ This macro makes it really easy to make simple CLI programs. It handles keeping 
 
 We generate a CLI with the following basic rules:
 - Runnable code, e.g. commands, are alphanumeric nouns with no flag syntax. ex: "ProgramName run"
-- Short flags have one dash, ex: "ProgramName -h"
-- Long flags have two dashes, ex: "ProgramName --help"
-- All programs have 'help, version, completions' generated for you as default commands.
+- Short flags have one dash, ex: "ProgramName -f"
+- Long flags have two dashes, ex: "ProgramName --flag"
+- All programs have 'help, version, zsh_completions' generated for you as default commands.
     - As such, these are reserved as function names in your program because the macro generates them.
 
 We generate a main function for your program, which we use to parse args and trigger functions. Any code you want to be part of the program should be exposed by providing a command that maps to the function you want to run, which should accept a `&Vec<CLIFlagType>` to read in any flags the user passes when calling it. All flags are universal.
 
-Argument-taking flags are represented by `CLIFlagType::ArgumentedFlag(flag, value)`; other flags use `CLIFlagType::UnargumentedFlag(flag)`.
+Argument-taking flags are represented by `CLIFlagType::ArgumentedFlag(flag, value)`; other flags use `CLIFlagType::UnargumentedFlag(flag)`. You can use the ```CLIFlagType::flag()``` convenience function to just get the CLIFlag portion.
 
 # Usage
 
 ```rust
+// This provides the macro as well as a reexport of owo-colors, which we use to colorize the output.
+// You should use it too!
+use cli_builder_macros::*;
+
 cli_builder! {
     commands = [
         CLICommand {
@@ -53,6 +57,8 @@ This is a test
 ## With flags
 
 ```rust
+use cli_builder_macros::*;
+
 cli_builder! {
     commands = [
         CLICommand {
@@ -101,7 +107,7 @@ You passed the following flags: --output output.txt
 This demonstrates quick destructuring of input and output argumented flags using filter_map and find_map.
 
 ```rust
-use cli_builder_macros::cli_builder;
+use cli_builder_macros::*;
 
 cli_builder! {
 	default = transcode;

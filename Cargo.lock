@@ -4,12 +4,34 @@ version = 4
 
 [[package]]
 name = "cli-builder-macros"
-version = "1.0.2"
+version = "2.0.0"
 dependencies = [
+ "cli-builder-macros-proc",
+ "owo-colors",
+]
+
+[[package]]
+name = "cli-builder-macros-proc"
+version = "2.0.0"
+dependencies = [
+ "owo-colors",
  "proc-macro2",
  "quote",
  "syn",
 ]
+
+[[package]]
+name = "example-cli"
+version = "2.0.0"
+dependencies = [
+ "cli-builder-macros",
+]
+
+[[package]]
+name = "owo-colors"
+version = "4.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "13c45bb4a6ae1280ec0803b1ef9d3455eb50f01efbbe1447ab020f1d54fba9d8"
 
 [[package]]
 name = "proc-macro2"
@@ -31,9 +53,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "2.0.119"
+version = "3.0.10"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "872831b642d1a07999a962a351ed35b955ea2cfc8f3862091e2a240a84f17297"
+checksum = "4ae9ccbea3a7b0b09443036490c8f34a8b1b760fd345e5c0dae0aac718faea79"
 dependencies = [
  "proc-macro2",
  "quote",
