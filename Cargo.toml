@@ -6,7 +6,7 @@ license = "Unlicense"
 authors = ["Jack Hamilton jackham800@gmail.com"]
 keywords = ["cli", "macro"]
 categories = ["command-line-interface"]
-repository = "https://github.com/jackhamilton/cli-builder-macros"
+repository = "https://github.com/jackhamilton/clilab"
 description = "Macro to make cli creation easy. Also generates commands for help, version, and zsh completions."
 
 [workspace]
@@ -19,8 +19,8 @@ license = "Unlicense"
 authors = ["Jack Hamilton jackham800@gmail.com"]
 keywords = []
 categories = []
-repository = "https://github.com/jackhamilton/cli-builder-macros"
-description = "Support crate for cli-lab"
+repository = "https://github.com/jackhamilton/clilab"
+description = "Support crate for clilab"
 
 [dependencies]
 cli-builder-macros = { version = "~2", path = "crates/cli-builder-macros" }

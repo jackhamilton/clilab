@@ -1,4 +1,4 @@
-use cli_builder::*;
+use clilab::*;
 
 cli_builder!(
     default = run;
