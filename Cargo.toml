@@ -13,7 +13,7 @@ description = "Macro to make cli creation easy. Also generates commands for help
 members = ["crates/cli-builder-macros", "crates/example-cli"]
 
 [workspace.package]
-version = "2.0.1"
+version = "2.0.0"
 edition = "2024"
 license = "Unlicense"
 authors = ["Jack Hamilton jackham800@gmail.com"]
